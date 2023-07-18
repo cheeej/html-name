@@ -18,3 +18,14 @@
 }
 
 // @import  "main", "contents";
+
+// comm.scss -
+// 공통요소 : 헤더, 풋터, 버튼, 아이콘, 박스
+
+#header {
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
