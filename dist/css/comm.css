@@ -554,22 +554,40 @@ legend {
   height: 100px;
 }
 
-.wrap {
-  width: 1200px;
-  margin: 0 auto;
-}
-.wrap header {
-  height: 100px;
-  background: rgb(255, 241, 216);
+.container {
+  padding: 0 4%;
 }
 
-.wrap .slide {
-  height: 300px;
-  background: blue;
+#header {
+  border-bottom: 1px solid #000;
 }
-
 #header .inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 70px;
+}
+#header .btn-g {
+  height: 40px;
+  width: 70px;
+}
+#header .btn-g::before {
+  font-size: 20px;
+  font-family: "Font Awesome 6 free";
+}
+#header .lst-util {
+  display: flex;
+  display: flex;
+}
+#header .lst-util .btn-search::before {
+  content: "\f002";
+  font-family: "Font Awesome 6 free";
+  font-weight: 900;
+  padding: 5px;
+}
+#header .lst-util .btn-ham::before {
+  content: "\f007";
+  font-family: "Font Awesome 6 free";
+  font-weight: 500;
+  padding: 5px;
 }/*# sourceMappingURL=comm.css.map */

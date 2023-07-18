@@ -29,12 +29,16 @@
     <meta name="twitter:domain" content="사이트 명" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"
     />
     <link
       rel="stylesheet"
@@ -53,21 +57,30 @@
     </div>
     <style></style>
     <div class="wrap">
-      <header id="header">
+      <header id="header" class="container">
         <div class="inner">
           <h1 id="logo"><a href="#">logo</a></h1>
-        </div>
-        <div class="utill">
-          <ul>
-            <li><a href="#">검색</a></li>
-            <li><a href="#">전체 메뉴보기</a></li>
-          </ul>
+          <div class="util">
+            <ul class="lst-util">
+              <li>
+                <!-- a : 링크 연결 / button : 동작 처리  -->
+                <button class="btn-g btn-search">
+                  <span class="blind">검색</span>
+                </button>
+              </li>
+              <li>
+                <button class="btn-g btn-ham">
+                  <span class="blind">마이페이지</span>
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
         <!-- <nav id="gnb">nav</nav> -->
       </header>
       <div class="slide-wrap slide-name">slide</div>
-      <main id="main">컨텐츠</main>
-      <footer id="footer">풋터</footer>
+      <main id="main" class="container">컨텐츠</main>
+      <footer id="footer" class="container">풋터</footer>
     </div>
   </body>
 </html>
