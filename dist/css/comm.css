@@ -570,16 +570,6 @@ legend {
 #header .head_right {
   display: flex;
 }
-#header .btn-g {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  width: 70px;
-}
-#header .btn-g::before {
-  font-size: 20px;
-}
 #header .material-icons-round {
   font-size: 30px;
 }
@@ -597,8 +587,20 @@ legend {
   width: 40px;
   height: 70px;
 }
-#header .gnb-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#header .gnb-wrap .input-burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+#header .gnb-wrap .label-burger .bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: red;
+}
+#header .gnb-wrap #gnb {
+  display: none;
 }/*# sourceMappingURL=comm.css.map */

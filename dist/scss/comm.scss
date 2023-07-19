@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import "reset";
-@import "fonts", "reset", "main", "contents";
+@import "variables", "mixin", "fonts", "reset", "main", "contents";
 
 // .wrap {
 //   width: 1200px;
@@ -28,7 +28,7 @@
 }
 
 #header {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid $b;
   .inner {
     display: flex;
     align-items: center;
@@ -38,17 +38,17 @@
   .head_right {
     display: flex;
   }
-  .btn-g {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 70px;
-    &::before {
-      font-size: 20px;
-      // font-family: "Font Awesome 6 free";
-    }
-  }
+  // .btn-g {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   height: 40px;
+  //   width: 70px;
+  //   &::before {
+  //     font-size: 20px;
+  //     // font-family: "Font Awesome 6 free";
+  //   }
+  // }
   .material-icons-round {
     font-size: 30px;
   }
@@ -82,8 +82,24 @@
     }
   }
   .gnb-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .input-burger {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    .label-burger {
+      .bar {
+        display: block;
+        width: 26px;
+        height: 2px;
+        background: red;
+      }
+    }
+    #gnb {
+      display: none;
+    }
   }
 }
