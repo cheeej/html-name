@@ -35,28 +35,55 @@
     justify-content: space-between;
     height: 70px;
   }
+  .head_right {
+    display: flex;
+  }
   .btn-g {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 40px;
     width: 70px;
     &::before {
       font-size: 20px;
-      font-family: "Font Awesome 6 free";
+      // font-family: "Font Awesome 6 free";
     }
+  }
+  .material-icons-round {
+    font-size: 30px;
   }
   .lst-util {
     display: flex;
-    .btn-search::before {
-      content: "\f002";
-      font-family: "Font Awesome 6 free";
-      font-weight: 900;
-      padding: 5px;
+
+    li {
+      display: flex;
     }
+    .btn-g,
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 70px;
+
+      // .btn-search::before {
+      //   content: "\f002";
+      //   font-family: "Font Awesome 6 free";
+      //   font-weight: 900;
+      //   padding: 5px;
+      // }
+      // display: flex;
+      // .btn-ham::before {
+      //   content: "\f007";
+      //   font-family: "Font Awesome 6 free";
+      //   font-weight: 500;
+      //   padding: 5px;
+      // }
+    }
+  }
+  .gnb-wrap {
     display: flex;
-    .btn-ham::before {
-      content: "\f007";
-      font-family: "Font Awesome 6 free";
-      font-weight: 500;
-      padding: 5px;
-    }
+    justify-content: center;
+    align-items: center;
   }
 }

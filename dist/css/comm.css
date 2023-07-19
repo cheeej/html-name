@@ -567,27 +567,38 @@ legend {
   justify-content: space-between;
   height: 70px;
 }
+#header .head_right {
+  display: flex;
+}
 #header .btn-g {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 40px;
   width: 70px;
 }
 #header .btn-g::before {
   font-size: 20px;
-  font-family: "Font Awesome 6 free";
+}
+#header .material-icons-round {
+  font-size: 30px;
 }
 #header .lst-util {
   display: flex;
+}
+#header .lst-util li {
   display: flex;
 }
-#header .lst-util .btn-search::before {
-  content: "\f002";
-  font-family: "Font Awesome 6 free";
-  font-weight: 900;
-  padding: 5px;
+#header .lst-util .btn-g,
+#header .lst-util a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 70px;
 }
-#header .lst-util .btn-ham::before {
-  content: "\f007";
-  font-family: "Font Awesome 6 free";
-  font-weight: 500;
-  padding: 5px;
+#header .gnb-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=comm.css.map */
