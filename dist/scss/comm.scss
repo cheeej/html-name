@@ -24,7 +24,10 @@
 
 // 공통
 .container {
-  padding: 0 4%;
+  padding: 0 $bothMargin;
+}
+.bg-gray {
+  background: $gray-e;
 }
 
 #header {
@@ -101,5 +104,91 @@
     #gnb {
       display: none;
     }
+  }
+}
+// main
+.section-g {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  // margin: 50px 0;
+  // padding: 30px;
+  // margin-bottom: 50px;
+  // border: 1px solid $gray-9;
+  // border-radius: 10px;
+  // background: #f1ffcf;
+}
+.sec-tit {
+  font-size: 20px;
+  color: $b;
+}
+.section-contents {
+  margin-top: 20px;
+  // or tit에 margin-bottom 넣어주면 됨
+}
+.section-shopping {
+  .lst-shopping {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+      // width: 49%;
+      width: calc(50% - $spachibgList / 2);
+      // width: calc(50% - 10px);
+      // 3단의 경우 33.333%
+      margin-bottom: $spachibgList;
+      // 20px
+      .thumb-shopping {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 200px;
+        border-radius: 4px;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: inherit;
+          border: 1px solid rgba($b, 0.06);
+          background: rgba($b, 0.03);
+        }
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 0 50%;
+      transition: transform 0.3s;
+    }
+  }
+  .txt-shopping {
+    .txt-shopping__tit {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 14px;
+      color: $titDefault;
+    }
+    .txt-shopping__desc {
+      font-size: 12px;
+    }
+  }
+  a {
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+// footer
+#footer {
+  // border-top: 1px solid $gray-9;
+
+  .inner {
+    border-top: 1px solid $gray-9;
   }
 }
