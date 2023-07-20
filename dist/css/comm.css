@@ -661,6 +661,7 @@ legend {
 }
 .section-shopping .txt-shopping .txt-shopping__tit {
   display: block;
+  margin-top: 10px;
   margin-bottom: 3px;
   font-size: 14px;
   color: #101010;
