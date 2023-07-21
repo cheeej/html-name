@@ -563,6 +563,8 @@ legend {
 }
 
 #header {
+  position: relative;
+  z-index: 1000;
   border-bottom: 1px solid #000;
 }
 #header .inner {
@@ -599,14 +601,58 @@ legend {
   height: 0;
   opacity: 0;
 }
+#header .gnb-wrap .input-burger:checked + label .bar {
+  background: #111;
+}
+#header .gnb-wrap .input-burger:checked + label .bar:nth-child(2) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+#header .gnb-wrap .input-burger:checked + label .bar:nth-child(3) {
+  opacity: 0;
+}
+#header .gnb-wrap .input-burger:checked + label .bar:nth-child(4) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+#header .gnb-wrap .input-burger:checked ~ #gnb {
+  right: 0;
+}
+#header .gnb-wrap .label-burger {
+  position: relative;
+  z-index: 1100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40px;
+  height: 70px;
+}
 #header .gnb-wrap .label-burger .bar {
   display: block;
   width: 26px;
   height: 2px;
-  background: red;
+  background: #111;
+  transition: all 0.3s;
+}
+#header .gnb-wrap .label-burger span:nth-child(3) {
+  margin: 5px 0;
 }
 #header .gnb-wrap #gnb {
-  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  width: 100%;
+  padding: 50px;
+  background: #093e7e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s;
+}
+
+#logo {
+  position: relative;
+  z-index: 1100;
 }
 
 .section-g {
@@ -636,8 +682,27 @@ legend {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 200px;
   border-radius: 4px;
+}
+.section-shopping .lst-shopping li .thumb-shopping::before {
+  content: "";
+  display: block;
+  height: 0;
+  padding-top: 100%;
+}
+.section-shopping .lst-shopping li .thumb-shopping img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 50%;
+     object-position: 0 50%;
+  transition: transform 0.3s;
 }
 .section-shopping .lst-shopping li .thumb-shopping::after {
   content: "";
@@ -649,15 +714,6 @@ legend {
   border-radius: inherit;
   border: 1px solid rgba(0, 0, 0, 0.06);
   background: rgba(0, 0, 0, 0.03);
-}
-.section-shopping .lst-shopping img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 0 50%;
-     object-position: 0 50%;
-  transition: transform 0.3s;
 }
 .section-shopping .txt-shopping .txt-shopping__tit {
   display: block;

@@ -31,12 +31,14 @@
 }
 
 #header {
+  position: relative;
+  z-index: 1000;
   border-bottom: 1px solid $b;
   .inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70px;
+    height: $headerHight;
   }
   .head_right {
     display: flex;
@@ -67,7 +69,7 @@
       justify-content: center;
       align-items: center;
       width: 40px;
-      height: 70px;
+      height: $headerHight;
 
       // .btn-search::before {
       //   content: "\f002";
@@ -92,19 +94,73 @@
       width: 0;
       height: 0;
       opacity: 0;
+      &:checked {
+        // input이 선택됬을 때
+        & + label {
+          .bar {
+            background: $txtDefault;
+            &:nth-child(2) {
+              transform: rotate(45deg) translate(4px, 4px);
+            }
+            &:nth-child(3) {
+              // display: none;
+              opacity: 0;
+            }
+            &:nth-child(4) {
+              transform: rotate(-45deg) translate(6px, -6px);
+            }
+          }
+        }
+        & ~ #gnb {
+          right: 0;
+        }
+      }
     }
+
     .label-burger {
+      position: relative;
+      z-index: 1100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 40px;
+      height: $headerHight;
       .bar {
         display: block;
         width: 26px;
         height: 2px;
-        background: red;
+        background: $txtDefault;
+        transition: all 0.3s;
+        // display none, block은 트렌지션 적용x
+        // 2개 이상 적용시 all -> 위치값 다시 적용
+      }
+      span {
+        &:nth-child(3) {
+          margin: 5px 0;
+        }
       }
     }
     #gnb {
-      display: none;
+      // display: none;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      // left: 100%;
+      bottom: 0;
+      width: 100%;
+      padding: 50px;
+      background: $prim3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: right 0.3s;
     }
   }
+}
+#logo {
+  position: relative;
+  z-index: 1100;
 }
 // main
 .section-g {
@@ -132,17 +188,35 @@
     justify-content: space-between;
     li {
       // width: 49%;
-      width: calc(50% - $spachibgList / 2);
+      width: calc(50% - $spachingList / 2);
       // width: calc(50% - 10px);
       // 3단의 경우 33.333%
-      margin-bottom: $spachibgList;
+      margin-bottom: $spachingList;
       // 20px
       .thumb-shopping {
         position: relative;
         overflow: hidden;
         width: 100%;
-        height: 200px;
+        // height: 200px;
         border-radius: 4px;
+        &::before {
+          content: "";
+          display: block;
+          height: 0;
+          padding-top: 100%;
+        }
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: 0 50%;
+          transition: transform 0.3s;
+        }
         &::after {
           content: "";
           position: absolute;
@@ -155,13 +229,6 @@
           background: rgba($b, 0.03);
         }
       }
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 0 50%;
-      transition: transform 0.3s;
     }
   }
   .txt-shopping {
