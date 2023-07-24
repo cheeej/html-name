@@ -552,6 +552,9 @@ legend {
   content: "";
 }
 
+.slide-intro {
+  margin-top: -70px;
+}
 .slide-intro .swiper-slide__txt {
   position: absolute;
   top: 50%;
@@ -625,6 +628,10 @@ legend {
 
 .contents {
   height: 100px;
+}
+
+.wrap {
+  padding-top: 70px;
 }
 
 .container {
