@@ -57,7 +57,8 @@
     <link rel="stylesheet" href="./dist/css/comm.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="./dist/js/comm.js"></script>
+    <script defer src="./dist/js/include.js"></script>
+    <script defer src="./dist/js/comm.js"></script>
   </head>
   <body>
     <div id="u-skip">
@@ -68,76 +69,81 @@
     <style></style>
     <div class="wrap">
       <!-- logo 왼쪽 type -->
-      <header id="header" class="container">
-        <div class="inner">
-          <h1 id="logo">
-            <a href="#">logo</a>
-          </h1>
-          <div class="head_right">
-            <div class="util">
-              <ul class="lst-util">
-                <li>
-                  <!-- a : 링크 연결 / button : 동작 처리  -->
-                  <button class="btn-g btn-lang">
-                    <span class="material-icons-round"> language </span>
-                  </button>
-                </li>
-                <li>
-                  <button class="btn-g btn-search">
-                    <span class="material-icons"> search </span>
-                    <!-- <span class="blind">검색</span> -->
-                  </button>
-                </li>
-                <li>
-                  <a href="#" class="btn-g btn-ham"
-                    ><span class="material-icons"> perm_identity </span>
-                    <!-- <span class="blind">마이페이지</span> --></a
-                  >
-                </li>
-              </ul>
+      <header data-include-path="./outline/header.html"></header>
+      <!-- Swiper -->
+      <div class="swiper slide-intro">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="https://images.unsplash.com/photo-1673031288723-f198cd527b97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+              alt=""
+            />
+            <div class="swiper-slide__txt">
+              <strong>제목제목제목</strong>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#">바로가기</a>
             </div>
-            <nav class="gnb-wrap">
-              <!-- 링크 연결없이 스크립트 처리 -->
-              <!-- <a href="javascript:void(0)"
-                ><span class="material-icons"> menu </span></a
-              > -->
-              <input
-                type="checkbox"
-                name="gnbNav"
-                id="gnbNav"
-                class="input-burger"
-              />
-              <!-- checked 없는 것이 기본값이라 삭제 -->
-              <label for="gnbNav" class="label-burger">
-                <span class="blind">전체 메뉴 보기</span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-              </label>
-              <div id="gnb">navi</div>
-            </nav>
           </div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
         </div>
-        <!-- <nav id="gnb">nav</nav> -->
-      </header>
-      <div class="slide-wrap slide-name">slide</div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+        <div class="swiper-pagination"></div>
+      </div>
       <main id="main">
         <!-- section 제목이 있는 그룹 -->
-        <section class="bg-gray container section-g section-tit">
+        <section class="bg-gray container section-g section-event">
           <div class="inner">
             <!-- tit(news)등 관련 개별 제목 및 개별 디자인 자리 -->
-            <h2 class="sec-tit">섹션 제목</h2>
+            <h2 class="sec-tit blind">event image</h2>
             <div class="section-contents">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Corrupti ex, alias vero dolorem, enim dolor adipisci soluta,
-                obcaecati voluptatum ratione ullam officiis quasi delectus
-                mollitia culpa a. Maxime, atque accusantium. Officia saepe
-                officiis dolorum praesentium illum vitae deleniti ut ex nihil?
-                Est, magni adipisci accusamus dignissimos voluptates voluptas
-                illum minus quas nesciunt. Non autem laborum, ullam nam quo
-                ducimus asperiores?
-              </p>
+              <ul class="lst-event">
+                <!-- <div class="lst-section"> -->
+                  <li>
+                    <img
+                      src="https://images.unsplash.com/photo-1686468117025-25e6fa62e826?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                      alt="event image"
+                    />
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Corrupti ex, obcaecati voluptatum ratione ullam officiis
+                      quasi delectus mollitia culpa a. Maxime, atque
+                      accusantium.
+                    </p>
+                  </li>
+                  <li>
+                    <img
+                      src="https://images.unsplash.com/photo-1686468117025-25e6fa62e826?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                      alt="event image"
+                    />
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Corrupti ex, obcaecati voluptatum ratione ullam officiis
+                      quasi delectus mollitia culpa a. Maxime, atque
+                      accusantium.
+                    </p>
+                  </li>
+                  <li>
+                    <img
+                      src="https://images.unsplash.com/photo-1686468117025-25e6fa62e826?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                      alt="event image"
+                    />
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Corrupti ex, obcaecati voluptatum ratione ullam officiis
+                      quasi delectus mollitia culpa a. Maxime, atque
+                      accusantium.
+                    </p>
+                  </li>
+                </div>
+              </ul>
             </div>
           </div>
         </section>
@@ -146,7 +152,7 @@
             <!-- tit 관련 개별 제목 및 개별 디자인 자리 -->
             <h2 class="sec-shopping">쇼핑</h2>
             <div class="section-contents">
-              <ul class="lst-shopping">
+              <ul class="lst-thumb-two-column">
                 <li>
                   <a href="#">
                     <!-- a태그 inline/ div 태그 block태그라 안에 들어가면 안되지만, 링크가 걸려야하기에 넣음 //-->
@@ -334,9 +340,7 @@
           </div>
         </section>
       </main>
-      <footer id="footer" class="container">
-        <div class="inner">풋터</div>
-      </footer>
+      <footer data-include-path="./outline/footer.html"></footer>
     </div>
   </body>
 </html>
